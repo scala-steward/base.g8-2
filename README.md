@@ -1,7 +1,8 @@
-A [Giter8][g8] template for ...!
+# Frank's [Giter8][g8] template
+[![Build Status](https://travis-ci.org/fthomas/base.g8.svg?branch=master)](https://travis-ci.org/fthomas/base.g8)
 
-Template license
-----------------
+## Template license
+
 Written in <YEAR> by <AUTHOR NAME> <AUTHOR E-MAIL ADDRESS>
 [other author/contributor lines as appropriate]
 
