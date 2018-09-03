@@ -37,7 +37,16 @@ lazy val compileSettings = Def.settings()
 lazy val metadataSettings = Def.settings(
   name := projectName,
   organization := groupId,
-  homepage := Some(url("https://github.com/" + gitHubOwner+ "/" + projectName))
+  homepage := Some(url("https://github.com/" + gitHubOwner + "/" + projectName)),
+  licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+  developers := List(
+    Developer(
+      id = "fthomas",
+      name = "Frank S. Thomas",
+      email = "",
+      url(s"https://github.com/fthomas")
+    )
+  )
 )
 
 lazy val noPublishSettings = Def.settings(
