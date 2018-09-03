@@ -38,7 +38,9 @@ lazy val metadataSettings = Def.settings(
   name := projectName,
   organization := groupId,
   homepage := Some(url(s"https://github.com/\$gitHubOwner/\$projectName")),
+  startYear := Some(2018),
   licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+  headerLicense := Some(HeaderLicense.ALv2("2018", s"\$projectName contributors")),
   developers := List(
     Developer(
       id = "fthomas",
@@ -64,10 +66,13 @@ addCommandsAlias(
   "validate",
   Seq(
     "clean",
+    "headerCheck",
     "scalafmtCheck",
     "scalafmtSbtCheck",
     "test:scalafmtCheck",
+    "coverage",
     "test",
+    "coverageReport",
     "doc",
     "readme/tut",
     "package",
