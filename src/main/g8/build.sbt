@@ -1,8 +1,14 @@
+import sbtcrossproject.CrossProject
+import sbtcrossproject.CrossType
+import sbtcrossproject.Platform
+
 /// variables
 
 val groupId = "$group_id$"
 val projectName = "$name$"
 val gitHubOwner = "$github_owner$"
+
+val moduleCrossPlatformMatrix: Map[String, List[Platform]] = Map()
 
 /// projects
 
@@ -25,6 +31,14 @@ lazy val readme = project
   )
 
 /// settings
+
+def myCrossProject(name: String): CrossProject =
+  CrossProject(name, file(name))(moduleCrossPlatformMatrix(name): _*)
+    .crossType(CrossType.Pure)
+    .withoutSuffixFor(JVMPlatform)
+    .in(file(s"modules/\$name"))
+    .settings(moduleName := s"\$projectName-\$name")
+    .settings(commonSettings)
 
 lazy val commonSettings = Def.settings(
   compileSettings,
