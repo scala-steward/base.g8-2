@@ -1,7 +1,7 @@
 /// variables
 
 val groupId = "$group_id$"
-val projectName = "$project_name$"
+val projectName = "$name$"
 val gitHubOwner = "$github_owner$"
 
 /// projects
