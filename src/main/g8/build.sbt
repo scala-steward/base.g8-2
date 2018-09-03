@@ -2,6 +2,7 @@
 
 val groupId = "$group_id$"
 val projectName = "$project_name$"
+val gitHubOwner = "$github_owner$"
 
 /// projects
 
@@ -33,10 +34,34 @@ lazy val commonSettings = Def.settings(
 
 lazy val compileSettings = Def.settings()
 
-lazy val metadataSettings = Def.settings()
+lazy val metadataSettings = Def.settings(
+  name := projectName,
+  organization := groupId,
+  homepage := Some(url("https://github.com/" + gitHubOwner+ "/" + projectName))
+)
 
 lazy val noPublishSettings = Def.settings(
   skip in publish := true
 )
 
 lazy val scaladocSettings = Def.settings()
+
+/// commands
+
+def addCommandsAlias(name: String, cmds: Seq[String]) =
+  addCommandAlias(name, cmds.mkString(";", ";", ""))
+
+addCommandsAlias(
+  "validate",
+  Seq(
+    "clean",
+    "scalafmtCheck",
+    "scalafmtSbtCheck",
+    "test:scalafmtCheck",
+    "test",
+    "doc",
+    "readme/tut",
+    "package",
+    "packageSrc"
+  )
+)
