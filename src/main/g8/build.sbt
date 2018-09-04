@@ -8,15 +8,23 @@ val groupId = "$group_id$"
 val projectName = "$name$"
 val gitHubOwner = "$github_owner$"
 
-val moduleCrossPlatformMatrix: Map[String, List[Platform]] = Map()
+val moduleCrossPlatformMatrix: Map[String, List[Platform]] = Map(
+  "core" -> List(JVMPlatform)
+)
 
 /// projects
 
 lazy val root = project
   .in(file("."))
+  .aggregate(coreJVM)
   .aggregate(readme)
   .settings(commonSettings)
   .settings(noPublishSettings)
+
+lazy val core = myCrossProject("core")
+  .settings()
+
+lazy val coreJVM = core.jvm
 
 lazy val readme = project
   .in(file("modules/readme"))
