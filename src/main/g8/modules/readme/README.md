@@ -1,5 +1,6 @@
 # $name$
 [![Build Status](https://travis-ci.org/$github_owner$/$name$.svg?branch=master)](https://travis-ci.org/$github_owner$/$name$)
+[![codecov](https://codecov.io/gh/$github_owner$/$name$/branch/master/graph/badge.svg)](https://codecov.io/gh/$github_owner$/$name$)
 
 ## License
 
