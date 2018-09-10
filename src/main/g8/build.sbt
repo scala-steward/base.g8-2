@@ -6,6 +6,7 @@ import sbtcrossproject.Platform
 
 val groupId = "$group_id$"
 val projectName = "$name$"
+val rootPkg = s"$groupId.${projectName.replace("-", "")}"
 val gitHubOwner = "$github_owner$"
 
 val moduleCrossPlatformMatrix: Map[String, List[Platform]] = Map(
