@@ -105,3 +105,13 @@ addCommandsAlias(
     "packageSrc"
   )
 )
+
+addCommandsAlias(
+  "formatAll",
+  Seq(
+    "headerCreate",
+    "scalafmt",
+    "test:scalafmt",
+    "scalafmtSbt"
+  )
+)
