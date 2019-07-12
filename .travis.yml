@@ -1,4 +1,6 @@
 language: scala
+jdk:
+  - openjdk8
 
 cache:
   directories:
@@ -6,8 +8,6 @@ cache:
     - $HOME/.sbt/boot/
     - $HOME/.sbt/launchers
 
-jdk:
-  - oraclejdk8
 
 script:
   - sbt -Dfile.encoding=UTF8 -J-XX:ReservedCodeCacheSize=256M test
