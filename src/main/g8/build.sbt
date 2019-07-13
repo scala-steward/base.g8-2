@@ -45,8 +45,8 @@ def myCrossProject(name: String): CrossProject =
   CrossProject(name, file(name))(moduleCrossPlatformMatrix(name): _*)
     .crossType(CrossType.Pure)
     .withoutSuffixFor(JVMPlatform)
-    .in(file(s"modules/\$name"))
-    .settings(moduleName := s"\$projectName-\$name")
+    .in(file(s"modules/$name"))
+    .settings(moduleName := s"$projectName-$name")
     .settings(commonSettings)
 
 lazy val commonSettings = Def.settings(
@@ -63,10 +63,10 @@ lazy val compileSettings = Def.settings()
 lazy val metadataSettings = Def.settings(
   name := projectName,
   organization := groupId,
-  homepage := Some(url(s"https://github.com/\$gitHubOwner/\$projectName")),
+  homepage := Some(url(s"https://github.com/$gitHubOwner/$projectName")),
   startYear := Some(2018),
   licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
-  headerLicense := Some(HeaderLicense.ALv2("2018", s"\$projectName contributors")),
+  headerLicense := Some(HeaderLicense.ALv2("2018", s"$projectName contributors")),
   developers := List(
     Developer(
       id = "fthomas",
