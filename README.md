@@ -1,5 +1,5 @@
 # Frank's [Giter8][g8] template
-[![Build Status](https://travis-ci.org/fthomas/base.g8.svg?branch=master)](https://travis-ci.org/fthomas/base.g8)
+[![Build Status](https://travis-ci.com/fthomas/base.g8.svg?branch=master)](https://travis-ci.com/fthomas/base.g8)
 
 ## Template license
 
