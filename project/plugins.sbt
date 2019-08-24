@@ -2,7 +2,7 @@ addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.11.0")
 
 // plugins that are also used in the template
 addSbtPlugin("com.dwijnand" % "sbt-travisci" % "1.2.0")
-addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "1.6.0-RC4")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.0.0")
 addSbtPlugin("de.heikoseeberger" % "sbt-header" % "5.2.0")
 addSbtPlugin("io.github.davidgregory084" % "sbt-tpolecat" % "0.1.7")
 addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "0.6.1")
