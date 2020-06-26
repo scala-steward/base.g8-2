@@ -1,4 +1,4 @@
-addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.12.0")
+addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.13.0")
 
 // plugins that are also used in the template
 addSbtPlugin("com.dwijnand" % "sbt-travisci" % "1.2.0")
