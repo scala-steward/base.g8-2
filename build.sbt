@@ -16,6 +16,7 @@ lazy val root = project
       "-Xss2m",
       "-Dfile.encoding=UTF-8"
     ),
-    resolvers += Resolver.url("typesafe",
-      url("https://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
+    resolvers += Resolver.url("typesafe", url("https://repo.typesafe.com/typesafe/ivy-releases/"))(
+      Resolver.ivyStylePatterns
+    )
   )
