@@ -17,5 +17,5 @@ lazy val root = project
       "-Dfile.encoding=UTF-8"
     ),
     resolvers += Resolver.url("typesafe",
-      url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
+      url("https://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
   )
