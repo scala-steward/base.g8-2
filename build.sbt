@@ -13,7 +13,6 @@ lazy val root = project
       "-Xms1024m",
       "-Xmx1024m",
       "-XX:ReservedCodeCacheSize=128m",
-      "-XX:MaxPermSize=256m",
       "-Xss2m",
       "-Dfile.encoding=UTF-8"
     ),
