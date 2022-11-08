@@ -1,6 +1,6 @@
 ThisBuild / evictionErrorLevel := Level.Info
 
-addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.15.1")
+addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.16.0")
 
 // plugins that are also used in the template
 addSbtPlugin("com.codecommit" % "sbt-github-actions" % "0.14.2")
