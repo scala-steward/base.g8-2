@@ -5,7 +5,7 @@ addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.16.2")
 // plugins that are also used in the template
 addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.15.0")
 
-addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.0")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.1")
 
 addSbtPlugin("de.heikoseeberger" % "sbt-header" % "5.10.0")
 
